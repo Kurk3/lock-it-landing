@@ -11,7 +11,7 @@
         <NuxtLink to="/#features">Features</NuxtLink>
         <NuxtLink to="/changelog">Changelog</NuxtLink>
       </div>
-      <a href="https://github.com/Kurk3/lock-it/releases/latest" class="nav-download">Download</a>
+      <a href="https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-It-1.0.0-universal.dmg" class="nav-download">Download</a>
     </div>
   </nav>
 </template>
