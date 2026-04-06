@@ -1,0 +1,16 @@
+{
+  "name": "lock-it-landing",
+  "version": "1.0.0",
+  "description": "Landing page & website for Lock It — Focus & Productivity Menu Bar App for macOS",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "nuxt": "^4.4.2"
+  }
+}
