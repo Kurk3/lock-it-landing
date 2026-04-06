@@ -1,23 +1,16 @@
 <template>
-  <section id="how-it-works" class="section how-it-works">
+  <section id="how-it-works" class="section">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">How It Works</span>
-        <h2 class="section-title">Focus in <span class="highlight">3 simple steps</span></h2>
-        <p class="section-subtitle mx-auto">
-          From setup to deep focus in under a minute. No complicated configuration needed.
-        </p>
-      </div>
-
+      <p class="how-label">Three steps. That's it.</p>
       <div class="steps">
-        <div v-for="(step, index) in steps" :key="step.title" class="step">
-          <div class="step-number">{{ index + 1 }}</div>
-          <div class="step-content">
+        <div v-for="(step, i) in steps" :key="i" class="step">
+          <div class="step-text">
+            <span class="step-num">{{ i + 1 }}</span>
             <h3 class="step-title">{{ step.title }}</h3>
-            <p class="step-desc">{{ step.description }}</p>
+            <p class="step-desc">{{ step.desc }}</p>
           </div>
-          <div class="step-visual">
-            <div v-html="step.visual"></div>
+          <div class="step-mock">
+            <div class="app-frame" v-html="step.mock"></div>
           </div>
         </div>
       </div>
@@ -26,187 +19,81 @@
 </template>
 
 <script setup>
+const appIcon = `<div style="width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:#1a1a1a;border-radius:5px;flex-shrink:0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.5" fill="white" stroke="none"/></svg></div>`
+const closeIcon = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+const hdr = (extra='') => `<div class="app-header"><div class="app-logo">${appIcon}<span>LOCK IT</span></div><div class="app-header-btns">${extra}<div class="app-header-btn">${closeIcon}</div></div></div>`
+
 const steps = [
   {
     title: 'Create a Profile',
-    description: 'Pick your apps, arrange desktops, choose an ambient sound. Give it a name and you\'re set.',
-    visual: `<div class="mock-create">
-      <div class="mock-input"><span class="mock-label">Name</span><span class="mock-value">Deep Work</span></div>
-      <div class="mock-input"><span class="mock-label">Apps</span><span class="mock-value">VS Code, Terminal, Safari</span></div>
-      <div class="mock-input"><span class="mock-label">Sound</span><span class="mock-value">Rain</span></div>
-    </div>`
+    desc: 'Pick which apps to open, how to arrange them across desktops, and choose an ambient sound. Name it and save.',
+    mock: `${hdr()}
+      <div class="app-body" style="gap:10px;">
+        <div style="font-size:13px;font-weight:600;color:var(--text-primary)">New Profile</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:10px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.5px">Profile</div>
+          <div style="background:#1a1a1a;border:1px solid #333333;border-radius:6px;padding:8px 10px;font-size:12px;color:var(--text-primary)">Deep Work</div>
+          <div style="background:#1a1a1a;border:1px solid #333333;border-radius:6px;padding:8px 10px;font-size:12px;color:var(--text-muted)">VS Code, Terminal, Safari</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:10px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.5px">Background Sound</div>
+          <div style="background:#1a1a1a;border:1px solid #333333;border-radius:6px;padding:8px 10px;font-size:12px;color:var(--text-primary);display:flex;justify-content:space-between"><span>Rain</span><span style="color:var(--text-muted);font-size:10px">60%</span></div>
+        </div>
+      </div>
+      <div class="app-nav"><div></div><div style="display:flex;gap:6px"><div style="padding:6px 14px;font-size:12px;font-weight:500;color:var(--text-secondary);border:1px solid #333333;border-radius:6px">Cancel</div><div style="padding:6px 14px;font-size:12px;font-weight:600;background:var(--text-primary);color:var(--bg-primary);border-radius:6px">Save Profile</div></div></div>`
   },
   {
     title: 'Click Start',
-    description: 'Lock It launches your apps in the configured layout, enables grayscale, starts the timer, and plays audio.',
-    visual: `<div class="mock-start">
-      <div class="mock-timer">24:37</div>
-      <div class="mock-playing">Rain — Playing</div>
-      <div class="mock-status-bar">
-        <div class="mock-progress"></div>
-      </div>
-    </div>`
+    desc: "Lock It opens your apps in the exact layout, closes everything else, activates grayscale, plays your sound, and starts the timer. You're in the zone in seconds.",
+    mock: `${hdr()}
+      <div class="app-body" style="padding:20px 14px">
+        <div class="mock-locked">
+          <div class="mock-lock-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+          <div class="mock-locked-label">LOCKED IN</div>
+          <div class="mock-timer">47:23</div>
+          <div class="mock-mode-tag">Deep Work</div>
+          <div class="mock-sound-bar"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Rain <div class="mock-sound-slider"><div class="mock-sound-fill"></div></div> 60%</div>
+          <div class="mock-stop-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg> Stop Session</div>
+        </div>
+      </div>`
   },
   {
-    title: 'Focus & Track',
-    description: 'The timer runs in the menu bar while you work. When done, session stats are saved automatically.',
-    visual: `<div class="mock-stats">
-      <div class="mock-stat-row"><span>Today</span><span class="val">3h 42m</span></div>
-      <div class="mock-stat-row"><span>Streak</span><span class="val">12 days</span></div>
-      <div class="mock-stat-row"><span>Sessions</span><span class="val">247</span></div>
-    </div>`
+    title: 'Stop & See Your Stats',
+    desc: "When you're done, stop the session. Lock It saves your focus time, tracks your streak, and shows you exactly how much deep work you've done.",
+    mock: `${hdr()}
+      <div class="app-body" style="gap:10px">
+        <div class="mock-stat-cards"><div class="mock-stat-card"><span class="mock-stat-val">247</span><span class="mock-stat-lbl">Sessions</span></div><div class="mock-stat-card"><span class="mock-stat-val">142h</span><span class="mock-stat-lbl">Focus</span></div><div class="mock-stat-card"><span class="mock-stat-val">12</span><span class="mock-stat-lbl">Streak</span></div></div>
+        <div class="mock-chart"><div class="mock-chart-label">This Week</div><div class="mock-bars"><div class="mock-bar-col"><div class="mock-bar" style="height:70%"></div><span class="mock-bar-lbl">M</span></div><div class="mock-bar-col"><div class="mock-bar" style="height:85%"></div><span class="mock-bar-lbl">T</span></div><div class="mock-bar-col"><div class="mock-bar" style="height:45%"></div><span class="mock-bar-lbl">W</span></div><div class="mock-bar-col"><div class="mock-bar" style="height:90%"></div><span class="mock-bar-lbl">T</span></div><div class="mock-bar-col"><div class="mock-bar" style="height:60%"></div><span class="mock-bar-lbl">F</span></div><div class="mock-bar-col"><div class="mock-bar" style="height:30%"></div><span class="mock-bar-lbl">S</span></div><div class="mock-bar-col"><div class="mock-bar" style="height:50%"></div><span class="mock-bar-lbl">S</span></div></div></div>
+      </div>
+      <div class="app-nav"><div class="app-nav-add">+ Add Profile</div><div class="app-nav-right"><div class="app-nav-btn">Profiles</div><div class="app-nav-btn active">Stats</div><div class="app-nav-btn">Settings</div></div></div>`
   }
 ]
 </script>
 
 <style scoped>
-.how-it-works {
-  background: var(--bg-secondary);
+.how-label {
+  font-size: 13px; color: var(--text-muted); margin-bottom: 48px;
+  letter-spacing: -0.1px;
 }
 
-.highlight {
-  color: var(--text-secondary);
-}
-
-.steps {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-top: 64px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding: 40px;
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  transition: var(--transition);
-}
-
-.step:hover {
-  border-color: var(--border-light);
-}
-
-.step-number {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--accent);
-  background: var(--bg-tertiary);
-  border-radius: 16px;
-}
-
-.step-content {
-  flex: 1;
-}
-
-.step-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.step-desc {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.step-visual {
-  flex-shrink: 0;
-  width: 220px;
-  padding: 20px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-/* Mock visuals */
-:deep(.mock-input) {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-}
-
-:deep(.mock-input:last-child) {
-  border-bottom: none;
-}
-
-:deep(.mock-label) {
-  color: var(--text-muted);
-}
-
-:deep(.mock-value) {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-:deep(.mock-start) {
-  text-align: center;
-}
-
-:deep(.mock-timer) {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--accent);
+.steps { display: flex; flex-direction: column; gap: 72px; }
+.step { display: flex; align-items: center; gap: 56px; }
+.step:nth-child(even) { flex-direction: row-reverse; }
+.step:nth-child(even) .step-text { text-align: right; }
+.step:nth-child(even) .step-desc { margin-left: auto; }
+.step-text { flex: 1; }
+.step-num {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  color: var(--text-muted); margin-bottom: 12px;
   font-variant-numeric: tabular-nums;
 }
-
-:deep(.mock-playing) {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin: 8px 0 12px;
-}
-
-:deep(.mock-status-bar) {
-  height: 4px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-:deep(.mock-progress) {
-  width: 40%;
-  height: 100%;
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-:deep(.mock-stat-row) {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-:deep(.val) {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .step {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .step-visual {
-    width: 100%;
-  }
+.step-title { font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.4px; }
+.step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; max-width: 380px; }
+.step-mock { flex-shrink: 0; }
+@media (max-width: 900px) {
+  .step, .step:nth-child(even) { flex-direction: column; }
+  .step-text, .step:nth-child(even) .step-text { text-align: left; }
+  .step-desc, .step:nth-child(even) .step-desc { margin-left: 0; }
+  .step-mock { width: 100%; display: flex; justify-content: center; }
 }
 </style>

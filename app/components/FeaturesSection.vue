@@ -1,19 +1,15 @@
 <template>
-  <section id="features" class="section features">
+  <section id="features" class="section">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">Features</span>
-        <h2 class="section-title">Everything you need to<br /><span class="highlight">stay in the zone</span></h2>
-        <p class="section-subtitle mx-auto">
-          Lock It gives you a complete toolkit to create the perfect focus environment, right from your menu bar.
-        </p>
-      </div>
+      <h2 class="section-title">What it does</h2>
 
-      <div class="features-grid">
-        <div v-for="feature in features" :key="feature.title" class="feature-card">
-          <div class="feature-icon" v-html="feature.icon"></div>
-          <h3 class="feature-title">{{ feature.title }}</h3>
-          <p class="feature-desc">{{ feature.description }}</p>
+      <div class="features-list">
+        <div v-for="f in features" :key="f.name" class="feature-item">
+          <div class="feature-icon" v-html="f.icon"></div>
+          <div class="feature-content">
+            <span class="feature-name">{{ f.name }}</span>
+            <span class="feature-desc">{{ f.desc }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -22,103 +18,34 @@
 
 <script setup>
 const features = [
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-    title: 'Desktop Arrangement',
-    description: 'Organize apps across multiple macOS Spaces with fullscreen, split-view, or custom layouts automatically.'
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`,
-    title: 'Ambient Sounds',
-    description: 'Immerse yourself with Rain, River Stream, or Forest Birds. Adjustable volume per profile for the perfect atmosphere.'
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
-    title: 'Session Timer',
-    description: 'Track every focus session with a live elapsed timer displayed right in your menu bar popup.'
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`,
-    title: 'Grayscale Mode',
-    description: 'Automatically convert your screen to grayscale to reduce visual distractions and stay focused on what matters.'
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
-    title: 'Detailed Statistics',
-    description: 'View total sessions, focus time, day streaks, weekly activity charts, and per-profile breakdowns.'
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    title: 'Focus Profiles',
-    description: 'Create unlimited custom profiles with specific app arrangements, sounds, and settings tailored to each workflow.'
-  }
+  { name: 'Focus Profiles', desc: 'Save your ideal workspace and activate it instantly', icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10"/></svg>' },
+  { name: 'Auto-Arrange Windows', desc: 'Apps open and position across multiple desktops', icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>' },
+  { name: 'Close Distractions', desc: "Quit everything that isn't part of your session", icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' },
+  { name: 'Grayscale Mode', desc: 'Strip color to reduce compulsive checking', icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>' },
+  { name: 'Ambient Sounds', desc: 'Rain, forest, river — pick your focus soundtrack', icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>' },
+  { name: 'Session Timer', desc: 'Track how long you stay locked in', icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' },
+  { name: 'Stats & Streaks', desc: 'Total focus time, daily streaks, weekly activity', icon: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>' },
 ]
 </script>
 
 <style scoped>
-.features {
-  position: relative;
-}
+.features-list { display: flex; flex-direction: column; gap: 0; margin-top: 36px; }
 
-.highlight {
-  color: var(--text-secondary);
+.feature-item {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--page-border);
 }
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 64px;
-}
-
-.feature-card {
-  padding: 36px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  transition: var(--transition);
-}
-
-.feature-card:hover {
-  border-color: var(--border-light);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
+.feature-item:first-child { border-top: 1px solid var(--page-border); }
 
 .feature-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  background: var(--bg-tertiary);
-  color: var(--accent);
-  border-radius: 14px;
-  margin-bottom: 20px;
+  flex-shrink: 0; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); background: var(--page-bg-alt);
+  border: 1px solid var(--page-border); border-radius: 8px;
 }
 
-.feature-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-.feature-desc {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
-
-@media (max-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-}
+.feature-content { display: flex; flex-direction: column; gap: 1px; }
+.feature-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.feature-desc { font-size: 13px; color: var(--text-muted); }
 </style>

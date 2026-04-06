@@ -1,105 +1,39 @@
 <template>
   <section class="hero">
-    <div class="glow-accent hero-glow-1"></div>
-    <div class="glow-accent hero-glow-2"></div>
-
-    <div class="container hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        macOS Menu Bar App
-      </div>
-
-      <h1 class="hero-title">
-        Lock in your focus.<br />
-        <span class="hero-highlight">Lock out distractions.</span>
-      </h1>
-
-      <p class="hero-description">
-        Create customizable focus profiles that arrange your apps, play ambient sounds,
-        and eliminate distractions — all from the macOS menu bar.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">
-          Download for macOS
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-          </svg>
-        </a>
-        <a href="#features" class="btn btn-secondary">
-          Learn More
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Free</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">macOS</span>
-          <span class="stat-label">Native</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">0</span>
-          <span class="stat-label">Distractions</span>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">macOS menu bar app</p>
+        <h1 class="hero-title">One click.<br/>Locked in.</h1>
+        <p class="hero-sub">Focus profiles that open your apps, arrange your windows, kill distractions, play ambient sound, and start a timer. One button.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/Kurk3/lock-it/releases/latest" class="hero-cta">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download for macOS
+          </a>
+          <span class="hero-free">Free, forever</span>
         </div>
       </div>
-
-      <!-- App Preview -->
-      <div class="hero-preview">
-        <div class="preview-window">
-          <div class="window-bar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-          </div>
-          <div class="preview-content">
-            <div class="preview-sidebar">
-              <div class="sidebar-item active">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <span>Focus</span>
-              </div>
-              <div class="sidebar-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                <span>Profiles</span>
-              </div>
-              <div class="sidebar-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                <span>Stats</span>
-              </div>
+      <div class="hero-mock">
+        <div class="app-frame">
+          <div class="app-header">
+            <div class="app-logo"><div class="app-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.5" fill="white" stroke="none"/></svg></div><span>LOCK IT</span></div>
+            <div class="app-header-btns">
+              <div class="app-header-btn"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+              <div class="app-header-btn"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
             </div>
-            <div class="preview-main">
-              <div class="profile-card">
-                <div class="profile-icon">&#x1F4BB;</div>
-                <div>
-                  <div class="profile-name">Deep Work</div>
-                  <div class="profile-desc">VS Code + Terminal + Rain</div>
-                </div>
-                <button class="start-btn">Start</button>
-              </div>
-              <div class="profile-card">
-                <div class="profile-icon">&#x1F3A8;</div>
-                <div>
-                  <div class="profile-name">Design</div>
-                  <div class="profile-desc">Figma + Safari + Forest</div>
-                </div>
-                <button class="start-btn">Start</button>
-              </div>
-              <div class="profile-card active-session">
-                <div class="profile-icon">&#x270D;&#xFE0F;</div>
-                <div>
-                  <div class="profile-name">Writing</div>
-                  <div class="profile-desc">Session active — 47:23</div>
-                </div>
-                <button class="stop-btn">Stop</button>
-              </div>
+          </div>
+          <div class="app-body">
+            <div v-for="m in modes" :key="m.name" class="mock-mode-card">
+              <div class="mock-mode-info"><span class="mock-mode-name">{{ m.name }}</span><span class="mock-mode-desc">{{ m.desc }}</span></div>
+              <div class="mock-mode-actions"><div class="mock-btn-start">Start</div><div class="mock-btn-group"><div class="mock-btn-modify">Modify</div></div></div>
+            </div>
+          </div>
+          <div class="app-nav">
+            <div class="app-nav-add">+ Add Profile</div>
+            <div class="app-nav-right">
+              <div class="app-nav-btn active"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10"/></svg> Profiles</div>
+              <div class="app-nav-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg> Stats</div>
+              <div class="app-nav-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/></svg> Settings</div>
             </div>
           </div>
         </div>
@@ -109,276 +43,57 @@
 </template>
 
 <script setup>
+const modes = [
+  { name: 'Deep Work', desc: 'VS Code, Terminal, Safari — Rain' },
+  { name: 'Design', desc: 'Figma, Safari — Forest Birds' },
+  { name: 'Writing', desc: 'iA Writer — River Stream' },
+]
 </script>
 
 <style scoped>
-.hero {
-  position: relative;
-  padding: 160px 0 80px;
-  overflow: hidden;
-}
+.hero { padding: 120px 0 60px; }
 
-.hero-glow-1 {
-  top: -200px;
-  right: -200px;
-  opacity: 0.3;
-}
+.hero-content { text-align: center; max-width: 560px; margin: 0 auto 56px; }
 
-.hero-glow-2 {
-  bottom: -100px;
-  left: -200px;
-  opacity: 0.15;
-}
-
-.hero-content {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  margin-bottom: 32px;
-}
-
-.badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+.hero-eyebrow {
+  font-size: 12px; font-weight: 500; color: var(--text-muted);
+  letter-spacing: 0.5px; margin-bottom: 16px;
 }
 
 .hero-title {
-  font-size: clamp(40px, 7vw, 72px);
-  font-weight: 900;
-  line-height: 1.05;
-  margin-bottom: 24px;
-  color: var(--accent);
-  letter-spacing: -2px;
+  font-size: clamp(40px, 6vw, 64px); font-weight: 800; line-height: 0.95;
+  color: var(--text-primary); letter-spacing: -2px; margin-bottom: 20px;
+  text-wrap: balance;
 }
 
-.hero-highlight {
-  background: linear-gradient(135deg, #ffffff, #a0a0a0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero-sub {
+  font-size: 15px; color: var(--text-muted); line-height: 1.6;
+  max-width: 440px; margin: 0 auto 28px;
+  text-wrap: balance;
 }
 
-.hero-description {
-  font-size: 20px;
-  color: var(--text-muted);
-  max-width: 620px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
+.hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; }
+
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--text-primary); color: var(--bg-primary);
+  padding: 10px 22px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; transition: opacity 0.2s;
+}
+.hero-cta:hover { opacity: 0.88; }
+
+.hero-free { font-size: 12px; color: var(--text-muted); }
+
+.hero-mock { display: flex; justify-content: center; }
+
+.app-icon {
+  width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;
+  background: #1a1a1a; border-radius: 5px; flex-shrink: 0;
 }
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 48px;
-}
-
-.hero-stats {
-  display: inline-flex;
-  align-items: center;
-  gap: 32px;
-  padding: 16px 40px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  margin-bottom: 64px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-.stat-number {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--accent);
-}
-
-.stat-label {
-  font-size: 12px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.stat-divider {
-  width: 1px;
-  height: 32px;
-  background: var(--border);
-}
-
-/* ===== APP PREVIEW ===== */
-.hero-preview {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.preview-window {
-  background: var(--bg-secondary);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 60px var(--white-glow);
-}
-
-.window-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 20px;
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border);
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.dot.red { background: #ff5f57; }
-.dot.yellow { background: #febc2e; }
-.dot.green { background: #28c840; }
-
-.preview-content {
-  display: flex;
-  min-height: 300px;
-}
-
-.preview-sidebar {
-  width: 180px;
-  padding: 20px 16px;
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 14px;
-  color: var(--text-muted);
-  transition: var(--transition);
-}
-
-.sidebar-item.active {
-  background: var(--bg-tertiary);
-  color: var(--accent);
-}
-
-.preview-main {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.profile-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 20px;
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-
-.profile-card:hover {
-  border-color: var(--border-light);
-}
-
-.profile-icon {
-  font-size: 28px;
-}
-
-.profile-name {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.profile-desc {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-.start-btn,
-.stop-btn {
-  margin-left: auto;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 13px;
-  font-weight: 600;
-  font-family: var(--font);
-  cursor: pointer;
-  border: none;
-  transition: var(--transition);
-}
-
-.start-btn {
-  background: var(--accent);
-  color: var(--bg-primary);
-}
-
-.stop-btn {
-  background: var(--danger);
-  color: #fff;
-  box-shadow: 0 0 20px var(--danger-glow);
-}
-
-.active-session {
-  border-color: var(--border-light);
-  background: var(--bg-tertiary);
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 120px 0 60px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .hero-stats {
-    gap: 20px;
-    padding: 12px 24px;
-  }
-
-  .preview-sidebar {
-    display: none;
-  }
+@media (max-width: 600px) {
+  .hero { padding: 100px 0 40px; }
+  .hero-content { margin-bottom: 40px; }
+  .hero-actions { flex-direction: column; gap: 8px; }
 }
 </style>

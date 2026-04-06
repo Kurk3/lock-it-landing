@@ -56,7 +56,12 @@
 
 <script setup>
 useHead({
-  title: 'Changelog — Lock It'
+  title: 'Changelog — Lock It',
+  meta: [
+    { name: 'description', content: 'See what\'s new in Lock It. Every update, bug fix, and new feature — documented.' },
+    { property: 'og:title', content: 'Changelog — Lock It' },
+    { property: 'og:description', content: 'Release notes for Lock It. Every update documented.' },
+  ]
 })
 
 const releases = [
@@ -146,7 +151,7 @@ const releases = [
   position: relative;
   padding-left: 32px;
   margin-bottom: 64px;
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--page-border);
 }
 
 .release::before {
@@ -200,8 +205,8 @@ const releases = [
 
 .release-highlights {
   padding: 20px 24px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: var(--page-bg-alt);
+  border: 1px solid var(--page-border);
   border-radius: var(--radius);
   margin-bottom: 24px;
   font-size: 15px;
@@ -264,9 +269,9 @@ const releases = [
   margin: 0 auto;
   text-align: center;
   padding: 48px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: var(--page-bg-alt);
+  border: 1px solid var(--page-border);
+  border-radius: var(--radius);
 }
 
 .changelog-cta p {

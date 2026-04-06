@@ -1,10 +1,9 @@
 <template>
   <div>
     <HeroSection />
-    <FeaturesSection />
     <HowItWorksSection />
-    <ScreenshotSection />
-    <PricingSection />
+    <WhyItWorksSection />
+    <FeaturesSection />
     <DownloadSection />
     <FooterSection />
   </div>
