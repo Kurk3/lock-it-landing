@@ -14,6 +14,8 @@ export default defineNuxtConfig({
         { property: 'og:description', content: 'Create customizable focus profiles that arrange your apps, play ambient sounds, and eliminate distractions.' },
         { name: 'theme-color', content: '#0e0e0e' }
       ],
+
+
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
