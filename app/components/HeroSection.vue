@@ -25,7 +25,7 @@
           <div class="app-body">
             <div v-for="m in modes" :key="m.name" class="mock-mode-card">
               <div class="mock-mode-info"><span class="mock-mode-name">{{ m.name }}</span><span class="mock-mode-desc">{{ m.desc }}</span></div>
-              <div class="mock-mode-actions"><div class="mock-btn-start">Start</div><div class="mock-btn-group"><div class="mock-btn-modify">Modify</div></div></div>
+              <div class="mock-mode-actions"><div class="mock-btn-start">Start</div><div class="mock-btn-group"><div class="mock-btn-modify">Modify</div><div class="mock-btn-delete">Delete</div></div></div>
             </div>
           </div>
           <div class="app-nav">
@@ -33,7 +33,7 @@
             <div class="app-nav-right">
               <div class="app-nav-btn active"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10"/></svg> Profiles</div>
               <div class="app-nav-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg> Stats</div>
-              <div class="app-nav-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/></svg> Settings</div>
+              <div class="app-nav-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Settings</div>
             </div>
           </div>
         </div>
