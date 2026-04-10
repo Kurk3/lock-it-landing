@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   nitro: {
     prerender: {
-      routes: ['/', '/changelog']
+      routes: ['/', '/changelog', '/privacy', '/terms']
     }
   }
 })

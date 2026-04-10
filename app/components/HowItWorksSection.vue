@@ -5,7 +5,6 @@
       <div class="steps">
         <div v-for="(step, i) in steps" :key="i" class="step">
           <div class="step-text">
-            <span class="step-num">{{ i + 1 }}</span>
             <h3 class="step-title">{{ step.title }}</h3>
             <p class="step-desc">{{ step.desc }}</p>
           </div>
@@ -82,11 +81,6 @@ const steps = [
 .step:nth-child(even) .step-text { text-align: right; }
 .step:nth-child(even) .step-desc { margin-left: auto; }
 .step-text { flex: 1; }
-.step-num {
-  display: inline-block; font-size: 11px; font-weight: 700;
-  color: var(--text-muted); margin-bottom: 12px;
-  font-variant-numeric: tabular-nums;
-}
 .step-title { font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.4px; }
 .step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; max-width: 380px; }
 .step-mock { flex-shrink: 0; }

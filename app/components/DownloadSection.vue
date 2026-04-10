@@ -8,6 +8,7 @@
         Download for macOS
       </a>
       <span class="download-note">Requires macOS 13 Ventura or later</span>
+      <p class="download-legal">By downloading, you agree to our <NuxtLink to="/terms">Terms of Use</NuxtLink> and <NuxtLink to="/privacy">Privacy Policy</NuxtLink>.</p>
     </div>
   </section>
 </template>
@@ -37,5 +38,16 @@
 .download-note {
   display: block; margin-top: 12px;
   font-size: 11px; color: var(--text-muted); opacity: 0.5;
+}
+
+.download-legal {
+  margin-top: 20px; font-size: 11px; color: var(--text-muted); opacity: 0.4;
+}
+.download-legal :deep(a) {
+  text-decoration: underline; text-underline-offset: 2px;
+  text-decoration-color: rgba(160,160,160,0.3); transition: var(--transition);
+}
+.download-legal :deep(a):hover {
+  color: var(--text-secondary); text-decoration-color: var(--text-muted);
 }
 </style>

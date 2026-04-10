@@ -20,7 +20,8 @@
           <span class="footer-col-title">Resources</span>
           <NuxtLink to="/changelog">Changelog</NuxtLink>
           <a href="mailto:support@lockit.app">Support</a>
-          <a href="#">Privacy Policy</a>
+          <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
+          <NuxtLink to="/terms">Terms of Use</NuxtLink>
         </div>
       </div>
     </div>
