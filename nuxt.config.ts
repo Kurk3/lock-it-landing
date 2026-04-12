@@ -51,7 +51,7 @@ export default defineNuxtConfig({
               priceCurrency: 'USD'
             },
             description: 'Focus profiles for macOS. One click to open your apps, arrange your windows, play ambient sound, and start a timer.',
-            downloadUrl: 'https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-It-1.0.0-universal.dmg',
+            downloadUrl: 'https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-it-1.0.0-universal.dmg',
             softwareVersion: '1.0.0',
             aggregateRating: undefined
           })

@@ -51,8 +51,8 @@ public/
 
 ## Links
 
-- Website: [lockit.app](https://lockit.app)
-- Download: [Latest Release (.dmg)](https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-It-1.0.0-universal.dmg)
+- Website: [lock-it-landing.vercel.app](https://lock-it-landing.vercel.app)
+- Download: [Latest Release (.dmg)](https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-it-1.0.0-universal.dmg)
 
 ## License
 
