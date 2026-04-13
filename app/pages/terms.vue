@@ -19,7 +19,7 @@
 
           <div class="legal-block">
             <h2>What Lock It is</h2>
-            <p>Lock It is a free macOS menu bar application that helps you create focus environments by managing app windows, closing distractions, playing ambient sounds, and tracking focus sessions. The App runs entirely on your computer and does not require an internet connection or user account.</p>
+            <p>Lock It is a free macOS menu bar application that helps you create focus environments by managing app windows, closing distractions, and tracking focus sessions. The App runs entirely on your computer and does not require an internet connection or user account.</p>
           </div>
 
           <div class="legal-block">

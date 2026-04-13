@@ -30,7 +30,7 @@ const settingsIcon = `<svg viewBox="0 0 24 24" width="12" height="12" fill="none
 const steps = [
   {
     title: 'Create a Profile',
-    desc: 'Pick which apps to open, how to arrange them across desktops, and choose an ambient sound. Name it and save.',
+    desc: 'Pick which apps to open, how to arrange them across desktops. Name it and save.',
     mock: `${hdr()}
       <div class="app-body" style="gap:10px;">
         <div style="font-size:13px;font-weight:600;color:var(--text-primary)">New Profile</div>
@@ -74,25 +74,12 @@ const steps = [
           </div>
         </div>
 
-        <!-- Background Sound -->
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <div style="font-size:10px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.5px">Background Sound</div>
-          <div style="background:#1a1a1a;border:1px solid #333333;border-radius:6px;padding:8px 10px;font-size:12px;color:var(--text-primary);display:flex;justify-content:space-between;align-items:center">
-            <span>Rain</span>
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#a0a0a0" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px;color:var(--text-muted)">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-            <div style="flex:1;height:4px;background:#282828;border-radius:2px;position:relative"><div style="position:absolute;left:0;top:0;height:100%;width:60%;background:var(--text-primary);border-radius:2px"></div></div>
-            <span style="font-size:11px;color:var(--text-muted);min-width:30px;text-align:right">60%</span>
-          </div>
-        </div>
       </div>
       <div class="app-nav"><div></div><div style="display:flex;gap:6px"><div style="padding:6px 14px;font-size:12px;font-weight:500;color:var(--text-secondary);border:1px solid #333333;border-radius:6px">Cancel</div><div style="padding:6px 14px;font-size:12px;font-weight:600;background:var(--text-primary);color:var(--bg-primary);border-radius:6px">Save Profile</div></div></div>`
   },
   {
     title: 'Click Start',
-    desc: "Lock It opens your apps in the exact layout, closes everything else, activates grayscale, plays your sound, and starts the timer. You're in the zone in seconds.",
+    desc: "Lock It opens your apps in the exact layout, closes everything else, activates grayscale, and starts the timer. You're in the zone in seconds.",
     mock: `${hdr()}
       <div class="app-body" style="padding:20px 14px">
         <div class="mock-locked">
@@ -104,7 +91,6 @@ const steps = [
           <div class="mock-locked-label">LOCKED IN</div>
           <div class="mock-timer">47:23</div>
           <div class="mock-mode-tag">Deep Work</div>
-          <div class="mock-sound-bar"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Rain <div class="mock-sound-slider"><div class="mock-sound-fill"></div></div> 60%</div>
           <div class="mock-stop-btn"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg> Stop Session</div>
         </div>
       </div>`

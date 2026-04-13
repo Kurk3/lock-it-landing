@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Lock It — One click. Locked in.' },
-        { name: 'twitter:description', content: 'Focus profiles for macOS. Open apps, arrange windows, kill distractions, play ambient sound — one click from the menu bar.' },
+        { name: 'twitter:description', content: 'Focus profiles for macOS. Open apps, arrange windows, kill distractions — one click from the menu bar.' },
         // Apple specific
         { name: 'apple-mobile-web-app-title', content: 'Lock It' },
         { name: 'application-name', content: 'Lock It' },
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
               price: '0',
               priceCurrency: 'USD'
             },
-            description: 'Focus profiles for macOS. One click to open your apps, arrange your windows, play ambient sound, and start a timer.',
+            description: 'Focus profiles for macOS. One click to open your apps, arrange your windows, and start a timer.',
             downloadUrl: 'https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-it-1.0.0-universal.dmg',
             softwareVersion: '1.0.0',
             aggregateRating: undefined

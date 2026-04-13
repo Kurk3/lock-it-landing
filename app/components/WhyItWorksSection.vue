@@ -32,12 +32,8 @@ const points = [
     text: 'Studies from the Center for Humane Technology show that color triggers compulsive screen use. Removing it cuts the dopamine loop that pulls you toward distractions. Lock It activates grayscale automatically when a session starts. Your screen becomes a tool, not a trap.'
   },
   {
-    title: 'The right sound puts your brain in work mode',
-    text: 'Research in the Journal of Consumer Research found that moderate ambient noise (~70dB) boosts creative thinking. Nature sounds lower your stress response and promote calm focus. Lock It plays rain, forest, or river — tuned to whatever works for you.'
-  },
-  {
     title: 'Rituals build flow',
-    text: 'Mihaly Csikszentmihalyi\'s research on flow states shows that consistent pre-work rituals train your brain to focus faster. The same setup, same sound, same trigger — your brain learns that when Lock It activates, it\'s time to work.'
+    text: 'Mihaly Csikszentmihalyi\'s research on flow states shows that consistent pre-work rituals train your brain to focus faster. The same setup, same trigger — your brain learns that when Lock It activates, it\'s time to work.'
   },
   {
     title: 'Tracking what you do changes what you do',

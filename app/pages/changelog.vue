@@ -78,13 +78,10 @@ const releases = [
           'Custom focus profiles with name, description, and personalized setup',
           'Desktop arrangement — organize apps across multiple macOS Spaces',
           'Fullscreen, split-view, and custom layout support',
-          'Background ambient sounds: Rain, River Stream, Forest Birds',
-          'Per-profile volume control',
           'Grayscale mode to reduce visual distractions',
           'Close other apps when starting a session',
           'One-click session activation from tray popup',
           'Live elapsed timer display (MM:SS / HH:MM:SS)',
-          'Mid-session volume control',
           'Confirmation dialog before stopping',
         ]
       },

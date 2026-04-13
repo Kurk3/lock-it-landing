@@ -1,6 +1,6 @@
 # Lock It — Focus & Productivity for macOS
 
-Landing page for **Lock It**, a free macOS menu bar app that lets you create focus profiles to open apps, arrange windows, kill distractions, play ambient sound, and start a timer — all with one click.
+Landing page for **Lock It**, a free macOS menu bar app that lets you create focus profiles to open apps, arrange windows, kill distractions, and start a timer — all with one click.
 
 ## Tech Stack
 

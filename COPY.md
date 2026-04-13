@@ -29,10 +29,10 @@ Create focus profiles that open your apps, arrange your windows, and eliminate d
 **Label:** How It Works
 
 **Step 1: Create a Profile**
-Pick which apps to open, how to arrange them across desktops, and choose an ambient sound. Name it and save.
+Pick which apps to open, how to arrange them across desktops. Name it and save.
 
 **Step 2: Click Start**
-Lock It opens your apps in the exact layout, closes everything else, activates grayscale, plays your sound, and starts the timer. You're in the zone in seconds.
+Lock It opens your apps in the exact layout, closes everything else, activates grayscale, and starts the timer. You're in the zone in seconds.
 
 **Step 3: Stop & See Your Stats**
 When you're done, stop the session. Lock It saves your focus time, tracks your streak, and shows you exactly how much deep work you've done.
@@ -62,13 +62,10 @@ Behavioral psychologists call it choice architecture — the space you're in sha
 **3. Color keeps you hooked to the screen**
 Studies from the Center for Humane Technology show that color triggers compulsive screen use. Removing it cuts the dopamine loop that pulls you toward distractions. Lock It activates grayscale automatically when a session starts. Your screen becomes a tool, not a trap.
 
-**4. The right sound puts your brain in work mode**
-Research in the Journal of Consumer Research found that moderate ambient noise (~70dB) boosts creative thinking. Nature sounds lower your stress response and promote calm focus. Lock It plays rain, forest, or river — tuned to whatever works for you.
+**4. Rituals build flow**
+Mihaly Csikszentmihalyi's research on flow states shows that consistent pre-work rituals train your brain to focus faster. The same setup, same trigger — your brain learns that when Lock It activates, it's time to work.
 
-**5. Rituals build flow**
-Mihaly Csikszentmihalyi's research on flow states shows that consistent pre-work rituals train your brain to focus faster. The same setup, same sound, same trigger — your brain learns that when Lock It activates, it's time to work.
-
-**6. Tracking what you do changes what you do**
+**5. Tracking what you do changes what you do**
 The Hawthorne Effect: measuring behavior improves it. When you see your focus streaks, total hours, and session history, you naturally push to stay consistent. Lock It tracks every session — time, streaks, per-profile stats. Your deep work becomes visible.
 
 ---
@@ -84,7 +81,6 @@ Everything happens in one click.
 - **Auto-Arrange Windows** — Apps open and position across multiple desktops
 - **Close Distractions** — Quit everything that isn't part of your session
 - **Grayscale Mode** — Strip color to reduce compulsive checking
-- **Ambient Sounds** — Rain, forest, river — pick your focus soundtrack
 - **Session Timer** — Track how long you stay locked in
 - **Stats & Streaks** — Total focus time, daily streaks, weekly activity
 
