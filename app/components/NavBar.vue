@@ -11,18 +11,13 @@
         <NuxtLink to="/#features">Features</NuxtLink>
         <NuxtLink to="/changelog">Changelog</NuxtLink>
       </div>
-      <a href="https://github.com/Kurk3/lock-it-landing/releases/latest/download/Lock-it-1.0.0-universal.dmg" class="nav-download" @click="trackDownload('navbar')">Download</a>
+      <a href="/download" class="nav-download">Download</a>
     </div>
   </nav>
 </template>
 
 <script setup>
-import { track } from '@vercel/analytics'
 import { ref, onMounted, onUnmounted } from 'vue'
-
-const trackDownload = (location) => {
-  track('download', { location })
-}
 const isScrolled = ref(false)
 const handleScroll = () => { isScrolled.value = window.scrollY > 20 }
 onMounted(() => window.addEventListener('scroll', handleScroll))
